@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ewewerban – Profil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <title>ewewerban – Profil</title>
 
     <style>
         :root {
@@ -17,8 +14,7 @@
             --accent-red: #881337;
             --text-main: #e5e5e5;
             --text-muted: #9ca3af;
-            --font-pixel: 'Press Start 2P', monospace;
-            --font-retro: 'VT323', monospace;
+            --font-sys: 'Courier New', Courier, monospace;
         }
 
         * {
@@ -30,8 +26,8 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: var(--font-retro);
-            font-size: 1.4rem;
+            font-family: var(--font-sys);
+            font-size: 1.1rem;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
@@ -51,8 +47,8 @@
         }
 
         .back-link {
-            font-family: var(--font-pixel);
-            font-size: 0.75rem;
+            font-size: 0.85rem;
+            font-weight: bold;
             color: var(--accent-amber);
             text-decoration: none;
         }
@@ -84,26 +80,24 @@
         }
 
         .username {
-            font-family: var(--font-pixel);
             font-size: 2.2rem;
+            font-weight: bold;
             color: var(--accent-yellow);
             text-shadow: 3px 3px 0px var(--accent-red);
             margin-bottom: 0.5rem;
+            letter-spacing: 2px;
         }
 
         .subtitle {
             color: var(--text-muted);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
         .section-title {
-            font-family: var(--font-pixel);
             font-size: 1rem;
+            font-weight: bold;
             color: var(--accent-amber);
             margin: 2rem 0 1rem 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .info-list {
@@ -119,7 +113,7 @@
 
         .links-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
@@ -129,8 +123,7 @@
             text-align: center;
             background-color: var(--accent-amber);
             color: #000;
-            font-family: var(--font-pixel);
-            font-size: 0.7rem;
+            font-size: 0.85rem;
             padding: 0.8rem;
             text-decoration: none;
             font-weight: bold;
@@ -143,20 +136,27 @@
             background-color: var(--accent-yellow);
         }
 
+        .buycoffee-section {
+            margin-top: 2.5rem;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px dashed var(--accent-amber);
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
-            font-family: var(--font-pixel);
-            font-size: 0.6rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
         }
-    </footer>
+    </style>
 </head>
 <body>
 
     <header>
-        <a href="/" class="back-link">&lt; BURSZTYN STUDIO</a>
-        <span style="font-family: var(--font-pixel); font-size: 0.65rem; color: var(--text-muted);">USER PROFILE</span>
+        <a href="/Bursztyn-Studio" class="back-link">&lt; BURSZTYN STUDIO</a>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">USER PROFILE</span>
     </header>
 
     <main>
@@ -166,11 +166,11 @@
                 <p class="subtitle">Indie Game Dev | Creator | Community Admin</p>
             </div>
 
-            <div class="section-title">► O MNIE</div>
+            <div class="section-title">► O MNIĘ</div>
             <ul class="info-list">
                 <li><strong>Gamedev:</strong> Twórca w <strong>Bursztyn Studio</strong>, pracujący nad projektem retro pixel horroru <em>Don't Turn Back</em>.</li>
                 <li><strong>Administracja:</strong> Administrator serwisu <strong>harcwiki.sowa.eu.org</strong>.</li>
-                <li><strong>Obecność w sieci:</strong> Aktywność na platformach gamedevowych oraz społecznościowych (itch.io, Bluesky, Cloudflare Pages).</li>
+                <li><strong>Obecność w sieci:</strong> Aktywność na platformach gamedevowych oraz społecznościowych.</li>
             </ul>
 
             <div class="section-title">► LINKI I PROFILI</div>
@@ -180,6 +180,16 @@
                 <a href="https://harcwiki.sowa.eu.org" target="_blank" class="link-button">HARCWIKI</a>
                 <a href="https://ewewerban.pages.dev" target="_blank" class="link-button">PAGES.DEV</a>
             </div>
+
+            <!-- Widget BuyCoffee.to -->
+            <div class="buycoffee-section">
+                <p style="font-size: 0.9rem; color: var(--accent-yellow); margin-bottom: 1rem; font-weight: bold;">
+                    POSTAW MI KAWĘ / WSPACIE PROJEKTU:
+                </p>
+                <a href="https://buycoffee.to/ewewerban" target="_blank" style="display: inline-block;">
+                    <img src="https://buycoffee.to/btn/buycoffeeto-btn-primary.svg" style="width: 190px; height: auto;" alt="Postaw kawę dla ewewerban na buycoffee.to">
+                </a>
+            </div>
         </div>
     </main>
 
@@ -187,5 +197,7 @@
         <p>&copy; EWEWERBAN / BURSZTYN STUDIO</p>
     </footer>
 
+    <!-- Skrypt interaktywnego przycisku BuyCoffee -->
+    <script src="https://buycoffee.to/btn/script.js" data-username="ewewerban" data-color="#d97706"></script>
 </body>
 </html>
